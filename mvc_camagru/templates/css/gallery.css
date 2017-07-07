@@ -1,0 +1,157 @@
+.main
+{
+    min-width: 590px;
+    margin: 20px auto;
+    background: rgba(0, 0, 0, .3);
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .7);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 40%;
+    vertical-align: middle;
+}
+.item
+{
+    background: #fff;
+    width: 170px;
+    height: 150px;
+    display: inline-block;
+   /* text-align: center;!* отцентровка по горизонтали *!*/
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0px 0px 15px 10px;
+
+}
+
+.gallery
+{
+    width: 580px;
+    margin: auto;
+    font-size: 0px;
+
+}
+
+.modal_gallery
+{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    text-align: center;
+}
+.modal_form_gallery
+{
+    border-radius: 10px 10px 10px 10px;
+    background-color: #fefefe ;
+    margin: 20% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 20%; /* Could be more or less, depending on screen size */
+    min-width: 300px;
+
+}
+
+
+.item > div
+{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+
+.item > div > a > img
+{
+    width: 150px;
+    height: 120px;
+    border-radius: 10px;
+}
+
+.frontik
+{
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    position: absolute;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+}
+.back
+{
+    width: 80px;
+    height: 100px;
+    display: inline-block;
+    transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    background: hsla(35,95%,55%,.9);
+    color: black;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .9);
+    padding: 10px;
+    opacity: 0;
+}
+.item > div:hover .frontik
+{
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+
+
+}
+.item > div:hover .back
+{
+    transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    opacity: 1;
+}
+
+/* Pagination */
+.paginat{
+    margin: 30px;
+    height: 100%;
+    text-align: center;
+    position: relative;
+}
+.paginat a{
+    border: 1px solid #ddd;
+    padding: 6px 12px;
+    text-decoration: none;
+    background: #fff;
+    color: #428bca;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+}
+.paginat a:nth-child(even){
+    border-left: none;
+    border-right: none;
+}
+.paginat a:first-child{
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.paginat a:last-child{
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-right: 1px solid #ddd;
+}
+.paginat a:hover{
+    background: #eee;
+}
+.paginat > a.nav-active{
+    background: #428bca;
+    color: #fff;
+    border-color: #428bca;
+}
+
+
